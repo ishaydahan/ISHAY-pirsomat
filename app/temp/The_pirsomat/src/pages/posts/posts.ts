@@ -75,13 +75,6 @@ export class PostsPage {
   getPoints(){
     let env = this;
 
-    var DAY = 100 * 24 * 60 * 60 * 1000; /* 100 days */
-    var time = new Date().getTime() - new Date(env.p.created_time).getTime();
-    if (time > DAY) {
-      env.tooOld();
-      return;
-    }
-
     var ans = "userid="+env.user.userId+"&postid="+env.postid+"&points="+env.points;
 
     let headers = new Headers();
